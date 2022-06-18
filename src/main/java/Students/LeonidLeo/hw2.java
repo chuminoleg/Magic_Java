@@ -1,4 +1,4 @@
-package Students.Leonid;
+package Students.LeonidLeo;
 
 // тут второе задание - примитивы
 public class hw2 {

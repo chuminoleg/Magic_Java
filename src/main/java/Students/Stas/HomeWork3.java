@@ -1,0 +1,55 @@
+public class HomeWork3 {
+    public static void main(String[] args) {
+        byte a ;
+        a = 50;
+        short b ;
+        b = 50;
+        int c;
+        c = 240;
+        long d;
+        d = 56240;
+        float e;
+        e = 2.56f;
+        double f;
+        f = 2.6548;
+        boolean r = false;
+        String g;
+        g = "dfgd";
+        Byte A = a ;
+        Short B = b;
+        Integer C = c;
+        Long D = d;
+        Float E = e;
+        Double F = f;
+        Byte maxByte = Byte.MAX_VALUE;
+        Byte minByte = Byte.MIN_VALUE;
+        Short maxShort = Short.MAX_VALUE;
+        Short minShort = Short.MIN_VALUE;
+        Integer maxInt = Integer.MAX_VALUE;
+        Integer minInt = Integer.MIN_VALUE;
+        Long maxLong = Long.MAX_VALUE;
+        Long minLong = Long.MIN_VALUE;
+        Float maxFloat = Float.MAX_VALUE;
+        Float minFloat = Float.MIN_VALUE;
+        Double maxDouble = Double.MAX_VALUE;
+        Double minDouble = Double.MIN_VALUE;
+        System.out.println(A);
+        System.out.println(B);
+        System.out.println(C);
+        System.out.println(D);
+        System.out.println(E);
+        System.out.println(F);
+        System.out.println(maxByte);
+        System.out.println(minByte);
+        System.out.println(maxShort);
+        System.out.println(minShort);
+        System.out.println(maxInt);
+        System.out.println(minInt);
+        System.out.println(maxLong);
+        System.out.println(minLong);
+        System.out.println(maxFloat);
+        System.out.println(minFloat);
+        System.out.println(maxDouble);
+        System.out.println(minDouble);
+    }
+}
