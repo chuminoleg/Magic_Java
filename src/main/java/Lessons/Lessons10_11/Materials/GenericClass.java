@@ -1,13 +1,15 @@
 package Lessons.Lessons10_11.Materials;
 
-public class GenericClass <T, U, K> {
+public class GenericClass <T, U> {
     T t;
     U u;
-    K k;
+//    K k;
 
     public static void main(String[] args) {
-        GenericClass<String, String, String> genericClassString = new GenericClass();
-        genericClassString.method(" ");
+//        GenericClass<String, String, String> genericClassString = new GenericClass();
+        GenericClass<String, Integer> genericClass = new GenericClass();
+
+//        genericClassString.method(" ");
     }
 
 //    <T > T method(U t) {
