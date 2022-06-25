@@ -7,16 +7,15 @@ import java.nio.file.Paths;
 
 public class Lesson12_Breader {
     public static void main(String[] args) throws IOException {
-//        File file = new File("src/main/java/Lessons/Lesson12/Materials/testTextFile.txt");
-        BufferedReader reader1 = new BufferedReader(new InputStreamReader(Files.newInputStream(Paths.get("src/main/java/Lessons/Lesson12/Materials/testToWriteFile.txt"))));
-        BufferedReader reader2 = new BufferedReader(new InputStreamReader(System.in));
-
-
+        File file = new File("src/main/java/Lessons/Lesson12/testToWriteFile.txt");
+        BufferedReader reader1 = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
         while(reader1.readLine() != null) {
             System.out.println(reader1.readLine());
         }
         reader1.close();
 
+
+        BufferedReader reader2 = new BufferedReader(new InputStreamReader(System.in));
         String str = reader2.readLine();
         System.out.println(str);
 
