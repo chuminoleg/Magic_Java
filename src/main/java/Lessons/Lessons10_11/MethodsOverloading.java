@@ -1,7 +1,5 @@
 package Lessons.Lessons10_11;
 
-import java.util.Arrays;
-
 public class MethodsOverloading {
     public static void main(String[] args) {
 

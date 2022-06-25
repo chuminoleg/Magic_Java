@@ -1,7 +1,5 @@
 package Lessons.Lessons10_11.Materials;
 
-import Lessons.Lesson9.Lesson9VasrAndMethods;
-
 public class Lesson10Generics {
     public static void main(String[] args) {
         Lesson10Generics entity = new Lesson10Generics();
