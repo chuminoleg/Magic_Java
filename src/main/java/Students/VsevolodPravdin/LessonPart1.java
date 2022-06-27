@@ -1,3 +1,5 @@
+package Students.VsevolodPravdin;
+
 import sun.reflect.generics.tree.Tree;
 
 public class LessonPart1 {

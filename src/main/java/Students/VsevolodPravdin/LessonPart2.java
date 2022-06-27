@@ -1,3 +1,5 @@
+package Students.VsevolodPravdin;
+
 import java.util.Scanner;
 
 public class LessonPart2 {
