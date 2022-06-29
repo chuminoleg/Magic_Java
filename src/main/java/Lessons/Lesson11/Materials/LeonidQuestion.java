@@ -1,4 +1,4 @@
-package Lessons.Lessons10_11.Materials;
+package Lessons.Lesson11.Materials;
 
 public class LeonidQuestion implements Dividable{
 

@@ -1,4 +1,4 @@
-package Lessons.Lessons10_11;
+package Lessons.Lesson11;
 
 public class MethodsOverloading {
     public static void main(String[] args) {

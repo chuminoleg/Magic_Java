@@ -1,4 +1,4 @@
-package Lessons.Lessons10_11;
+package Lessons.Lesson11;
 
 import java.io.File;
 import java.io.FileNotFoundException;

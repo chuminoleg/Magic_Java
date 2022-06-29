@@ -1,4 +1,4 @@
-package Lessons.Lessons10_11;
+package Lessons.Lesson10;
 
 /* this представляет текущий экземпляр класса
  */
