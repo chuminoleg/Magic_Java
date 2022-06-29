@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-//        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 //        int x = scanner.nextInt();
 //        int y = scanner.nextInt();
 //        int z = scanner.nextInt();
@@ -29,14 +29,31 @@ public class Main {
 ////            System.out.println(check);
 ////        }
 
-        Scanner scaner = new Scanner(System.in);
-        String str = scaner.nextLine();
-        char[] array = str.toCharArray();
-        String str2 = " ";
-        for (int i = array.length - 1; i >= 0; i--) {
-            str2 = str2 + array[i];
-            String str3 = new String(str2);
-            System.out.println(str3);
-        }
+
+//        Scanner scaner = new Scanner(System.in);
+//        String str = scaner.nextLine();
+//        char[] array = str.toCharArray();
+//        String str2 = " ";
+//        for (int i = array.length - 1; i >= 0; i--) {
+//            str2 = str2 + array[i];
+//            String str3 = new String(str2);
+//            System.out.println(str3);
+//        }
+//
+//        final int a = 5, b = 8, c = 7;
+//        // System.out.println(1);
+//        // System.out.println(2);
+//        // System.out.println(3);
+//        // System.out.println(4);
+//        System.out.println(a);
+//        System.out.println(b);
+//        System.out.println(c);
+//        // System.out.println(8);
+        String word1 = scanner.next(); // "This"
+        String line1 = scanner.nextLine(); // " is a simple"
+        String word2 = scanner.next(); // "multiline"
+        String word3 = scanner.next(); // "input,"
+        String line2 = scanner.nextLine(); // ""
+
     }
 }
