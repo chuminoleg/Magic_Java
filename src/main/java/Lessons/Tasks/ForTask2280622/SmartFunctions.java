@@ -5,5 +5,5 @@ package Lessons.Tasks.ForTask2280622;
 */
 
 //
-//public interface SmartFunctions implements BasicFunctions {
-//}
+public interface SmartFunctions extends BasicFunctions {
+}
