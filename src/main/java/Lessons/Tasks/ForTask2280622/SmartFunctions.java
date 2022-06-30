@@ -1,4 +1,4 @@
-package Lessons.Lesson12.Tasks.ForTask2280622;
+package Lessons.Tasks.ForTask2280622;
 
 /* 
 Телефон в наследство
