@@ -1,0 +1,444 @@
+Задача1. (На повторение массивов). Напишите программу, которая выводит на консоль простые числа в промежутке от [2, 100]. Используйте для решения этой задачи оператор "%" (остаток от деления) и циклы.
+
+Задача 2. (ООП) Класс MobilePhone.
+Создайте класс MobilePhone, который содержит переменные number, model и weight.
+Создайте три экземпляра этого класса.
+Выведите на консоль значения их переменных.
+Добавить в класс Phone методы: receiveCall, имеет один параметр – имя звонящего. Выводит на консоль сообщение “Звонит {name}”. Метод getNumber – возвращает номер телефона. Вызвать эти методы для каждого из объектов.
+Добавить конструктор в класс Phone, который принимает на вход три параметра для инициализации переменных класса - number, model и weight.
+Добавить конструктор, который принимает на вход два параметра для инициализации переменных класса - number, model.
+Добавить конструктор без параметров.
+Вызвать из конструктора с тремя параметрами конструктор с двумя.
+Добавьте перегруженный метод receiveCall, который принимает два параметра - имя звонящего и номер телефона звонящего. Вызвать этот метод.
+Создать метод sendMessage с аргументами переменной длины. Данный метод принимает на вход номера телефонов, которым будет отправлено сообщение. Метод выводит на консоль номера этих телефонов.
+
+Задача 3. Класс Person
+Создать класс Person, который содержит:  переменные fullName, age;
+методы move() и talk(), в которых просто вывести на консоль сообщение -"Такой-то  Person говорит".
+Добавьте два конструктора  - Person() и Person(fullName, age).
+Создайте два объекта этого класса. Один объект инициализируется конструктором Person(), другой - Person(fullName, age).
+
+Задача 4. Читатели библиотеки.
+Определить класс Reader, хранящий такую информацию о пользователе библиотеки:
+
+ФИО,
+номер читательского билета,
+факультет,
+дата рождения,
+телефон.
+Методы takeBook(), returnBook().
+Разработать программу, в которой создается массив объектов данного класса.
+Перегрузить методы takeBook(), returnBook():
+- takeBook, который будет принимать количество взятых книг. Выводит на консоль сообщение "Петров В. В. взял 3 книги".
+- takeBook, который будет принимать переменное количество названий книг. Выводит на консоль сообщение "Петров В. В. взял книги: Приключения, Словарь, Энциклопедия".
+- takeBook, который будет принимать переменное количество объектов класса Book (создать новый класс, содержащий имя и автора книги). Выводит на консоль сообщение "Петров В. В. взял книги: Приключения, Словарь, Энциклопедия".
+ Аналогичным образом перегрузить метод returnBook(). Выводит на консоль сообщение "Петров В. В. вернул книги: Приключения, Словарь, Энциклопедия". Или  "Петров В. В. вернул 3 книги".
+
+Задача 6. Наследование Student, Aspirant
+Создайте пример наследования, реализуйте класс Student и класс Aspirant, аспирант отличается от студента наличием некой научной работы.
+Класс Student содержит переменные: String firstName, lastName, group. А также, double averageMark, содержащую среднюю оценку.
+Создать переменную типа Student, которая ссылается на объект типа Aspirant.
+Создать метод getStipendia() для класса Student, который возвращает сумму стипендии. Если средняя оценка студента равна 5, то сумма 100 у.е., иначе 80. Переопределить этот метод в классе Aspirant.  Если средняя оценка аспиранта равна 5, то сумма 200 у.е, иначе 180.
+Создать массив типа Student, содержащий объекты класса Student и Aspirant. Вызвать метод getSstipendia() для каждого элемента массива
+
+Задача 7. Фигуры
+Создайте супер класс Shape и его наследников Circle, Rectangle.
+Класс Shape содержит абстрактный метод draw() и переменную хранящую цвет.
+Классы Circle, Rectangle содержат координаты точек.
+Создать массив содержащий эти фигуры.
+В цикле "нарисовать" их (вызвать метод draw).
+Добавить метод equals() для классов Shape, Circle, Rectangle.
+
+Задача 8. Магазин.
+Создать класс Товар, имеющий переменные имя, цена, рейтинг.
+Создать класс Категория, имеющий переменные имя и массив товаров. Создать несколько объектов класса Категория.
+Создать класс Basket, содержащий массив купленных товаров.
+Создать класс User, содержащий логин, пароль и объект класса Basket. Создать объект класса User.
+
+Oleg Tschumin, [13.06.2022 23:07]
+Задача 8 на методы: Давай проведем рефакторинг кода: вынесем отдельно утильные методы.
+Для этого создай внутренний статический (вложенный) класс Calculator и перенеси в него методы add, subtract, multiply и divide.
+Не забудь подкорректировать их вызовы.
+
+
+Requirements:
+1. В классе Solution нужно создать вложенный (static nested) класс Calculator.
+2. Методы add, subtract, multiply и divide нужно перенести в класс Calculator.
+3. В методе main должны быть вызваны методы add, subtract, multiply и divide класса Calculator.
+
+Oleg Tschumin, [13.06.2022 23:08]
+Исходный код:
+
+Oleg Tschumin, [13.06.2022 23:13]
+import java.util.ArrayList;
+import java.util.List;
+
+/*
+Почувствуй себя деканом
+*/
+
+public class UniversityGroup {
+    public List<String> students;
+
+    public UniversityGroup() {
+        students = new ArrayList<>();
+        students.add("Сергей Фрединский");
+        students.add("Виталий Правдивый");
+        students.add("Максим Козыменко");
+        students.add("Наталия Андрющенко");
+        students.add("Ира Величенко");
+        students.add("Николай Соболев");
+        students.add("Снежана Слободенюк");
+    }
+
+    public void exclude(String excludedStudent) {
+        for (String student : students) {
+            if (student.equals(excludedStudent)) {
+                students.remove(student);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        UniversityGroup universityGroup = new UniversityGroup();
+        universityGroup.exclude("Виталий Правдивый");
+        universityGroup.students.forEach(System.out::println);
+    }
+}
+
+Oleg Tschumin, [13.06.2022 23:08]
+Исходный код:
+
+Oleg Tschumin, [13.06.2022 23:09]
+Задача 9. Оконные работы
+В классе Window есть метод changeSize, который должен менять размеры окна на значения, переданные в метод.
+Но если ты запустишь программу, то убедишься, что этот метод не работает. Тебе нужно исправить ошибки так, чтобы метод заработал.
+
+
+Requirements:
+1. Объявление и инициализацию полей класса Window изменять нельзя.
+2. Метод changeSize класса Window должен изменять значения полей класса согласно переданным данным.
+3. Объявление метода changeSize и названия параметров изменять нельзя.
+
+Oleg Tschumin, [13.06.2022 23:09]
+Исходный код для работы ниже:
+
+Oleg Tschumin, [13.06.2022 23:10]
+/*
+Оконные работы
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Window window = new Window();
+        window.printSize();
+        window.changeSize(4, 5);
+        window.printSize();
+    }
+}
+
+Oleg Tschumin, [13.06.2022 23:11]
+Задача 10. Кон, котэ и нация
+"Кон", "котэ" и "нация". Как соединить эти три строки? Ты же помнишь, как соединять String'и в Java?
+Исправь ошибки в коде, чтобы программа компилировалась и работала.
+
+
+Requirements:
+1. В методе main класса Solution нужно исправить ошибки: при выводе на экран должна использоваться конкатенация строк.
+
+Oleg Tschumin, [13.06.2022 23:11]
+Исходный код для работы ниже:
+
+Oleg Tschumin, [13.06.2022 23:11]
+/*
+Кон, котэ и нация
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        String name = "Diego";
+        int age = 35;
+        System.out.println("Name : " name " Age : " age);
+    }
+}
+
+Oleg Tschumin, [13.06.2022 23:12]
+Задача 11. Почувствуй себя деканом
+У нас есть группа в университете и метод, который должен отчислять конкретного студента, но он почему-то не работает.
+Твоя задача — найти ошибку и исправить, чтобы метод exclude смог отчислить студента.
+
+
+Requirements:
+1. В классе UniversityGroup должно быть публичное не статическое поле students типа List<String>.
+2. В классе UniversityGroup должен быть публичный не статический метод exclude(String) с типом возвращаемого значения void.
+3. Метод exclude должен удалять из списка переданного студента.
+
+Oleg Tschumin, [13.06.2022 23:13]
+Исходный код для работы ниже:
+
+Oleg Tschumin, [13.06.2022 23:13]
+import java.util.ArrayList;
+import java.util.List;
+
+/*
+Почувствуй себя деканом
+*/
+
+public class UniversityGroup {
+    public List<String> students;
+
+    public UniversityGroup() {
+        students = new ArrayList<>();
+        students.add("Сергей Фрединский");
+        students.add("Виталий Правдивый");
+        students.add("Максим Козыменко");
+        students.add("Наталия Андрющенко");
+        students.add("Ира Величенко");
+        students.add("Николай Соболев");
+        students.add("Снежана Слободенюк");
+    }
+
+    public void exclude(String excludedStudent) {
+        for (String student : students) {
+            if (student.equals(excludedStudent)) {
+                students.remove(student);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        UniversityGroup universityGroup = new UniversityGroup();
+        universityGroup.exclude("Виталий Правдивый");
+        universityGroup.students.forEach(System.out::println);
+    }
+}
+
+Oleg Tschumin, [13.06.2022 23:16]
+Задача 13. Следим за скобками
+Кажется, у нас есть лишняя скобка? Или одной не хватает? Разберись-ка с этой проблемой.
+
+
+Requirements:
+1. В методе main класса Solution нужно исправить ошибки компиляции.
+
+Oleg Tschumin, [13.06.2022 23:16]
+Код для работы ниже:
+
+Oleg Tschumin, [13.06.2022 23:17]
+/*
+Следим за скобками
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        if (System.getProperty("os.name").toLowerCase().contains("windows")) {
+            System.out.println("Windows detected!");
+    }
+}
+
+Oleg Tschumin, [13.06.2022 23:19]
+Задача 14. Двигатель — сердце автомобиля
+Двигатель — сложный механизм, для описания которого недостаточно обычной переменной.
+В классе Car создай внутренний класс (inner class) Engine. В классе Engine создай boolean поле isRunning, которое принимает значение true, если двигатель запущен, и false в противном случае. Также в этот класс добавь методы start и stop, которые будут запускать/останавливать двигатель (устанавливать соответствующее значение полю isRunning).
+Чтобы использовать двигатель, создай поле engine типа Engine в классе Car.
+
+
+Requirements:
+1. В классе Car нужно создать внутренний класс (inner class) Engine.
+2. В классе Engine должно существовать приватное поле isRunning типа boolean.
+3. В классе Engine должен существовать публичный метод void start, который устанавливает значение true полю isRunning.
+4. В классе Engine должен существовать публичный метод void stop, который устанавливает значение false полю isRunning.
+5. В классе Car должно существовать поле engine типа Engine.
+
+Oleg Tschumin, [13.06.2022 23:19]
+Код для работы ниже:
+
+Oleg Tschumin, [13.06.2022 23:19]
+/*
+Двигатель — сердце автомобиля
+*/
+
+public class Car {
+    //напишите тут ваш код
+
+}
+
+Oleg Tschumin, [13.06.2022 23:28]
+Задача 15. Студент
+Метод main класса Solution создает объект класса Student с конкретным именем, но программа не компилируется.
+Тебе нужно исправить ошибку в классе Student, чтобы программа компилировалась, и при запуске в консоль выводилось имя студента.
+
+
+Requirements:
+1. Метод main не изменяй.
+2. В классе Student должен быть конструктор с одним параметром.
+3. Конструктор должен инициализировать поле name полученным аргументом.
+
+Oleg Tschumin, [13.06.2022 23:28]
+Код для работы ниже:
+
+Oleg Tschumin, [13.06.2022 23:29]
+/*
+Студент
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Student student = new Student("Амиго");
+        System.out.println(student.name);
+    }
+}
+
+
+Oleg Tschumin, [13.06.2022 23:13]
+Задача 12. Телефон в наследство
+Необходимо правильно расставить ключевые слова extends и implements в представленных классах, чтобы программа компилировалась.
+
+
+Requirements:
+1. Интерфейс SmartFunctions должен компилироваться.
+2. Класс SmartPhone должен компилироваться.
+3. Класс Jphone должен компилироваться.
+4. Класс Gnusmas должен компилироваться.
+
+
+Oleg Tschumin, [13.06.2022 23:07]
+Задача 8 на методы: Давай проведем рефакторинг кода: вынесем отдельно утильные методы.
+Для этого создай внутренний статический (вложенный) класс Calculator и перенеси в него методы add, subtract, multiply и divide.
+Не забудь подкорректировать их вызовы.
+
+
+Requirements:
+1. В классе Solution нужно создать вложенный (static nested) класс Calculator.
+2. Методы add, subtract, multiply и divide нужно перенести в класс Calculator.
+3. В методе main должны быть вызваны методы add, subtract, multiply и divide класса Calculator.
+
+Oleg Tschumin, [13.06.2022 23:08]
+Исходный код:
+
+Oleg Tschumin, [13.06.2022 23:13]
+import java.util.ArrayList;
+import java.util.List;
+
+/*
+Почувствуй себя деканом
+*/
+
+public class UniversityGroup {
+    public List<String> students;
+
+    public UniversityGroup() {
+        students = new ArrayList<>();
+        students.add("Сергей Фрединский");
+        students.add("Виталий Правдивый");
+        students.add("Максим Козыменко");
+        students.add("Наталия Андрющенко");
+        students.add("Ира Величенко");
+        students.add("Николай Соболев");
+        students.add("Снежана Слободенюк");
+    }
+
+    public void exclude(String excludedStudent) {
+        for (String student : students) {
+            if (student.equals(excludedStudent)) {
+                students.remove(student);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        UniversityGroup universityGroup = new UniversityGroup();
+        universityGroup.exclude("Виталий Правдивый");
+        universityGroup.students.forEach(System.out::println);
+    }
+}
+
+Oleg Tschumin, [13.06.2022 23:13]
+Задача 12. Телефон в наследство
+Необходимо правильно расставить ключевые слова extends и implements в представленных классах, чтобы программа компилировалась.
+
+
+Requirements:
+1. Интерфейс SmartFunctions должен компилироваться.
+2. Класс SmartPhone должен компилироваться.
+3. Класс Jphone должен компилироваться.
+4. Класс Gnusmas должен компилироваться.
+
+Oleg Tschumin, [13.06.2022 23:14]
+Коды классов для работы ниже:
+
+Oleg Tschumin, [13.06.2022 23:16]
+Задача 13. Следим за скобками
+Кажется, у нас есть лишняя скобка? Или одной не хватает? Разберись-ка с этой проблемой.
+
+
+Requirements:
+1. В методе main класса Solution нужно исправить ошибки компиляции.
+
+Oleg Tschumin, [13.06.2022 23:16]
+Код для работы ниже:
+
+Oleg Tschumin, [13.06.2022 23:17]
+/*
+Следим за скобками
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        if (System.getProperty("os.name").toLowerCase().contains("windows")) {
+            System.out.println("Windows detected!");
+    }
+}
+
+Oleg Tschumin, [13.06.2022 23:19]
+Задача 14. Двигатель — сердце автомобиля
+Двигатель — сложный механизм, для описания которого недостаточно обычной переменной.
+В классе Car создай внутренний класс (inner class) Engine. В классе Engine создай boolean поле isRunning, которое принимает значение true, если двигатель запущен, и false в противном случае. Также в этот класс добавь методы start и stop, которые будут запускать/останавливать двигатель (устанавливать соответствующее значение полю isRunning).
+Чтобы использовать двигатель, создай поле engine типа Engine в классе Car.
+
+
+Requirements:
+1. В классе Car нужно создать внутренний класс (inner class) Engine.
+2. В классе Engine должно существовать приватное поле isRunning типа boolean.
+3. В классе Engine должен существовать публичный метод void start, который устанавливает значение true полю isRunning.
+4. В классе Engine должен существовать публичный метод void stop, который устанавливает значение false полю isRunning.
+5. В классе Car должно существовать поле engine типа Engine.
+
+Oleg Tschumin, [13.06.2022 23:19]
+Код для работы ниже:
+
+Oleg Tschumin, [13.06.2022 23:19]
+/*
+Двигатель — сердце автомобиля
+*/
+
+public class Car {
+    //напишите тут ваш код
+
+}
+
+Oleg Tschumin, [13.06.2022 23:28]
+Задача 15. Студент
+Метод main класса Solution создает объект класса Student с конкретным именем, но программа не компилируется.
+Тебе нужно исправить ошибку в классе Student, чтобы программа компилировалась, и при запуске в консоль выводилось имя студента.
+
+
+Requirements:
+1. Метод main не изменяй.
+2. В классе Student должен быть конструктор с одним параметром.
+3. Конструктор должен инициализировать поле name полученным аргументом.
+
+Oleg Tschumin, [13.06.2022 23:28]
+Код для работы ниже:
+
+Oleg Tschumin, [13.06.2022 23:29]
+/*
+Студент
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        Student student = new Student("Амиго");
+        System.out.println(student.name);
+    }
+}

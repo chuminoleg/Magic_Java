@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public class Lesson6MethodsPalindrome {
     public static void main(String[] args) {
-        showStr(reversArray(myScan()));
-        System.out.println(isPalindrome(myScan()));
+        String s = myScan();
+        showStr(reversArray(s));
+        showStr(isPalindrome(s));
 
     }
 
@@ -30,14 +31,14 @@ public class Lesson6MethodsPalindrome {
         System.out.println(str);
     }
 
-    static boolean isPalindrome(String s) {
+    static String isPalindrome(String s) {
         s = s.replaceAll("\\s+", "");
         int n = s.length();
         for (int i = 0; i < (n / 2); ++i) {
             if (s.charAt(i) != s.charAt(n - i - 1)) {
-                return false;
+                return "no palindrom";
             }
         }
-        return true;
+        return "palindrom";
     }
 }

@@ -2,11 +2,10 @@ package Students.VsevolodPravdin;
 
 import java.util.Scanner;
 
-public class NewLesson6MethodsPalindrome {
+public class OldLesson6MethodsPalindrome {
     public static void main(String[] args) {
-        String s = myScan();
-        showStr(reversArray(s));
-        showStr(isPalindrome(s));
+        showStr(reversArray(myScan()));
+        System.out.println(isPalindrome(myScan()));
 
     }
 
@@ -31,14 +30,14 @@ public class NewLesson6MethodsPalindrome {
         System.out.println(str);
     }
 
-    static String isPalindrome(String s) {
+    static boolean isPalindrome(String s) {
         s = s.replaceAll("\\s+", "");
         int n = s.length();
         for (int i = 0; i < (n / 2); ++i) {
             if (s.charAt(i) != s.charAt(n - i - 1)) {
-                return "no palindrom";
+                return false;
             }
         }
-        return "palindrom";
+        return true;
     }
 }
