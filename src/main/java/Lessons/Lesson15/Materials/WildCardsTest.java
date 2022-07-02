@@ -1,4 +1,4 @@
-package Lessons.Lesson15.Materials.WildCards;
+package Lessons.Lesson15.Materials;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package Students.Ilias_Plih.ValentinSilchuk;
+package Students.ValentinSilchuk;
 
 import java.util.Arrays;
 

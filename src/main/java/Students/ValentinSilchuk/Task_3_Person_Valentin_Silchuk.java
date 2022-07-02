@@ -1,4 +1,4 @@
-package Students.Ilias_Plih.ValentinSilchuk;
+package Students.ValentinSilchuk;
 /**Создать класс Person, который содержит:  переменные fullName, age;
  методы move() и talk(), в которых просто вывести на консоль сообщение -"Такой-то  Person говорит".
  Добавьте два конструктора  - Person() и Person(fullName, age).

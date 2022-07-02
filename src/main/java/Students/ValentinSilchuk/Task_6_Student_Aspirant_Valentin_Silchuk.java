@@ -1,4 +1,4 @@
-package Students.Ilias_Plih.ValentinSilchuk;
+package Students.ValentinSilchuk;
 
 /*Задача 6. Наследование Student, Aspirant
 Создайте пример наследования, реализуйте класс Student и класс Aspirant, аспирант отличается от студента наличием некой научной работы.

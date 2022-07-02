@@ -1,4 +1,4 @@
-package Students.Ilias_Plih.ValentinSilchuk;
+package Students.ValentinSilchuk;
 /** программа определяет, является ли фраза полиндромом (одинаково читается в прямом направлении и в обратном)
  * при этом исключаются пробелы и не имеет знаечения ригистр*/
 import java.util.Scanner;

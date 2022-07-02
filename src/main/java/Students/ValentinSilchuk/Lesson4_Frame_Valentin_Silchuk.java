@@ -1,4 +1,4 @@
-package Students.Ilias_Plih.ValentinSilchuk;
+package Students.ValentinSilchuk;
 
 /*Используя вложенные циклы while (цикл в цикле) выведи на экран незаполненный прямоугольник (его контур)
 размером 10 (высота) на 20 (ширина) из букв Б
