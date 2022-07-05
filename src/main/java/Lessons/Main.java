@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        getIntNumber();
+//        Scanner scanner = new Scanner(System.in);
 //        int x = scanner.nextInt();
 //        int y = scanner.nextInt();
 //        int z = scanner.nextInt();
@@ -49,11 +50,24 @@ public class Main {
 //        System.out.println(b);
 //        System.out.println(c);
 //        // System.out.println(8);
-        String word1 = scanner.next(); // "This"
-        String line1 = scanner.nextLine(); // " is a simple"
-        String word2 = scanner.next(); // "multiline"
-        String word3 = scanner.next(); // "input,"
-        String line2 = scanner.nextLine(); // ""
+//        String word1 = scanner.next(); // "This"
+//        String line1 = scanner.nextLine(); // " is a simple"
+//        String word2 = scanner.next(); // "multiline"
+//        String word3 = scanner.next(); // "input,"
+//        String line2 = scanner.nextLine(); // ""
 
+    }
+
+    static void getIntNumber() {
+        Scanner scanner = new Scanner(System.in);
+        int number = 0;
+        if (scanner.hasNextInt()) {
+            number = scanner.nextInt();
+            System.out.println("Введено целое число: " + number);
+        } else {
+            System.out.println("Ведите целое число: ");
+            getIntNumber(); // рекурсия
+        }
+        scanner.close();
     }
 }

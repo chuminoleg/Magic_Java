@@ -1,4 +1,4 @@
-package Lessons.Lesson17;
+package Lessons.Lesson17.Materials;
 
 public class AnonymousСlasses {
     public static void main(String[] args) {

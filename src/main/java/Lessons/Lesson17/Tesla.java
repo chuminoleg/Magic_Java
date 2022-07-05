@@ -1,4 +1,4 @@
-package Lessons;
+package Lessons.Lesson17;
 
 public class Tesla {
     private int id;

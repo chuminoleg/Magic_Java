@@ -1,4 +1,4 @@
-package Lessons.Lesson17;
+package Lessons.Lesson17.Materials;
 
 interface AbleToWeld {
     public void weld();
