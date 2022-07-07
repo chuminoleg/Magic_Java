@@ -1,0 +1,327 @@
+Oleg Tschumin, [07.07.2022 6:58]
+Задачи от от 2022-07-07:  Задача 1 .Разбираем пирамиду бокалов
+Задача простая: нужно разобрать пирамиду из бокалов, в чем нам поможет метод removeGlassesReverse. Этот метод должен снимать каждый ряд, начиная сверху (с конца списка). Тебе нужно реализовать этот метод.
+В тестировании тебе поможет метод main.
+Попробуй запустить программу и посмотреть на вывод.
+
+
+Requirements:
+1. В классе Solution должен быть публичный статический метод removeGlassesReverse(ArrayList<String>).
+2. Метод removeGlassesReverse должен удалить все элементы из переданного списка, начиная с конца (используй метод remove(int) у списка).
+
+Oleg Tschumin, [07.07.2022 6:58]
+import java.util.ArrayList;
+
+/*
+Разбираем пирамиду бокалов
+*/
+
+public class Solution {
+
+    private static ArrayList<String> initList() {
+        String glassTop     = "       🍷       ";
+        String glassSecond  = "      🍷🍷      ";
+        String glassThird   = "     🍷🍷🍷     ";
+        String glassFourth  = "    🍷🍷🍷🍷    ";
+        String glassFifth   = "   🍷🍷🍷🍷🍷   ";
+        String glassSixth   = "  🍷🍷🍷🍷🍷🍷  ";
+        String glassSeventh = " 🍷🍷🍷🍷🍷🍷🍷 ";
+        String glassEighth  = "🍷🍷🍷🍷🍷🍷🍷🍷";
+        ArrayList<String> list = new ArrayList<>();
+        list.add(glassEighth);
+        list.add(glassSeventh);
+        list.add(glassSixth);
+        list.add(glassFifth);
+        list.add(glassFourth);
+        list.add(glassThird);
+        list.add(glassSecond);
+        list.add(glassTop);
+        return list;
+    }
+
+    public static void print(ArrayList<String> glasses) {
+        for(int i = glasses.size() - 1; i >= 0; i--) {
+            System.out.println(glasses.get(i));
+        }
+    }
+
+    public static void removeGlassesReverse(ArrayList<String> glasses) {
+        System.out.println("Начинаем разбирать пирамиду...");
+
+        //напишите тут ваш код
+
+        if(glasses.size() == 0) {
+            System.out.println("Пирамида разобрана!");
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayList<String> glasses = initList();
+        print(glasses);
+
+        removeGlassesReverse(glasses);
+        print(glasses);
+    }
+}
+
+Oleg Tschumin, [07.07.2022 6:59]
+Задача 2. Дженерики и студенты
+В классе Faculty есть метод printStudentNames(ArrayList), который принимает список объектов и выводит их имена. Но на данный момент программа не компилируется.
+Твоя задача исправить этот баг. Для этого нужно исправить сигнатуру метода printStudentNames(ArrayList), чтобы он принимал список объектов только типа Student(используй дженерик).
+Метод main не участвует в проверке.
+
+
+Requirements:
+1. Исправь сигнатуру метода printStudentNames, чтобы он принимал список только студентов.
+2. Реализацию метода printStudentNames не изменять.
+
+Oleg Tschumin, [07.07.2022 7:00]
+import java.util.ArrayList;
+
+/*
+Дженерики и студенты
+*/
+
+public class Faculty {
+
+    public static void main(String[] args) {
+        var students = new ArrayList<Student>();
+        students.add(new Student("Акакий"));
+        students.add(new Student("Любослав"));
+
+        printStudentNames(students);
+    }
+
+    public static void printStudentNames(ArrayList students) {
+        for (int i = 0; i < students.size(); i++) {
+            System.out.println(students.get(i).getName());
+        }
+    }
+}
+
+Oleg Tschumin, [07.07.2022 7:00]
+public class Student {
+    private String name;
+
+    public Student(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+Oleg Tschumin, [07.07.2022 7:01]
+Задача 3. Назад в прошлое
+В классе Solution есть поле intArray, геттер и сеттер для него, и метод main с объявленными в нем переменными. Тебе нужно заменить типы переменных с var на конкретный тип объекта (изменять названия и инициализацию объектов нельзя), а также починить геттер и сеттер поля intArray.
+
+Пример:
+var console = new Scanner(System.in);
+Заменить на:
+Scanner console = new Scanner(System.in);
+
+
+Requirements:
+1. Замени типы переменных c var на конкретный тип объекта.
+2. Почини геттер и сеттер для поля intArray.
+
+Oleg Tschumin, [07.07.2022 7:01]
+/*
+Назад в прошлое
+*/
+
+public class Solution {
+    private var intArray = new int[4];
+
+    public var getIntArray() {
+        return intArray;
+    }
+
+    public void setIntArray(var intArray) {
+        this.intArray = intArray;
+    }
+
+    public static void main(String[] args) {
+        var solution = new Solution();
+        var string = new String("Hello");
+        var stringBuilder = new StringBuilder();
+    }
+}
+
+Oleg Tschumin, [07.07.2022 7:02]
+Задача 4. Солнечная система
+В 3020 году ученые научились выращивать новые планеты, одну из которых отправили в космос на орбиту Солнца.
+Эта планета находится между Землей и Марсом.
+Реализуй метод createNewPlanet(String), который должен добавлять переданную планету в список planets сразу после Земли. Посмотри, как изменился порядок следования планет.
+Методы main(), addPlanets() и print() не принимают участие в проверке.
+
+
+Requirements:
+1. Метод createNewPlanet(String) должен добавлять переданную планету в список planets на следующую позицию после Земли.
+
+Oleg Tschumin, [07.07.2022 7:02]
+/*
+Солнечная система
+*/
+
+public class Solution {
+    public static ArrayList<String> planets = new ArrayList<>();
+
+    public static void main(String[] args) {
+        addPlanets();
+        print();
+        createNewPlanet("Звезда Смерти");
+        print();
+    }
+
+    public static void createNewPlanet(String planetName) {
+        //напишите тут ваш код
+    }
+
+    public static void addPlanets() {
+        planets.add("Меркурий");
+        planets.add("Венера");
+        planets.add("Земля");
+        planets.add("Марс");
+        planets.add("Юпитер");
+        planets.add("Сатурн");
+        planets.add("Уран");
+        planets.add("Нептун");
+    }
+
+    public static void print() {
+        for (int i = 0; i < planets.size(); i++) {
+            System.out.println(String.format("%s — %d-я планета от Солнца", planets.get(i), (i + 1)));
+        }
+        System.out.println();
+    }
+}
+
+Oleg Tschumin, [07.07.2022 7:03]
+Задача 5. Вперед в будущее
+В классе Solution есть поля number, string и метод main с объявленными в нем переменными. Тебе нужно заменить объявления переменных на var, где это возможно. Порядок следования переменных не должен меняться.
+
+Пример:
+Scanner console = new Scanner(System.in);
+Заменить на:
+var console = new Scanner(System.in);
+
+
+Requirements:
+1. Замени типы переменных на var, где это возможно.
+2. Не изменяй правую часть выражений.
+
+Oleg Tschumin, [07.07.2022 7:03]
+/*
+Вперед в будущее
+*/
+
+public class Solution {
+    private int number = 54;
+    private String string = "string";
+
+    public static void main(String[] args) {
+        int integer = 22;
+        String string = "string";
+        int[] array = new int[5];
+        ArrayList<String> strings = new ArrayList<String>();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        Integer maxValue = Integer.valueOf(Integer.MAX_VALUE);
+    }
+}
+
+Oleg Tschumin, [07.07.2022 7:05]
+Внимание для выполнения задач где есть var надо переключиться на JDK 11 и выше
+
+Oleg Tschumin, [07.07.2022 7:05]
+Задача 6. Двойные фигурные скобки
+В методе main создается список ArrayList<String>, присваивается переменной var strings и заполняется пятью элементами.
+Нужно переписать код, не изменяя логику, используя двойные фигурные скобки.
+
+
+Requirements:
+1. Список strings должен заполняться пятью элементами в двойных фигурных скобках.
+
+Oleg Tschumin, [07.07.2022 7:05]
+import java.util.ArrayList;
+
+/*
+Двойные фигурные скобки
+*/
+
+public class Solution {
+
+    public static void main(String[] args) {
+        var strings = new ArrayList<String>();
+        strings.add("Так");
+        strings.add("тоже");
+        strings.add("можно");
+        strings.add("делать");
+        strings.add("!");
+    }
+}
+
+Oleg Tschumin, [07.07.2022 7:10]
+Задача 7. Переобуваемся на лету
+Потренируйся определять и изменять значения переменных во время выполнения программы:
+
+Поставь break point напротив вызова метода println и запусти программу в режиме отладки.
+После остановки нажми F8 ровно 9 раз.
+Посмотри, какое значение сейчас у переменной correction и установи такое же значение переменной fahrenheit (в окне отладки).
+Нажми F8 еще 6 раз.
+Посмотри текущее значение переменной correction и присвой это значение полю result (измени исходный код).
+В итоге в классе Solution должно быть только одно изменение: поле result должно быть инициализировано при объявлении.
+
+
+Requirements:
+1. Метод main не изменяй.
+2. Полю result должно быть присвоено правильное значение.
+
+Oleg Tschumin, [07.07.2022 7:10]
+/*
+Переобуваемся на лету
+*/
+
+public class Solution {
+
+    public static int result;
+
+    public static void main(String[] args) {
+        byte correction = Byte.MAX_VALUE;
+        for (double fahrenheit = -459.67; fahrenheit < 451; fahrenheit += 40) {
+            correction *= fahrenheit;
+            System.out.println(correction);
+        }
+    }
+}
+
+Oleg Tschumin, [07.07.2022 7:11]
+Задача 8. Выполнение фрагмента кода
+Потренируйся выполнять фрагмент кода во время работы программы:
+
+Поставь break point напротив вызова метода println и запусти программу в режиме отладки.
+После остановки нажми Alt+F8 (Option+F8 для macOS) и выполни следующий код:
+loop.replaceAll("\\W", "").split("fahrenheit")[1]
+Результат выполнения кода присвой полю result (измени исходный код).
+В итоге в классе Solution должно быть только одно изменение: поле result должно быть инициализировано при объявлении.
+
+
+Requirements:
+1. Метод main не изменяй.
+2. Полю result должно быть присвоено правильное значение.
+
+Oleg Tschumin, [07.07.2022 7:11]
+/*
+Выполнение фрагмента кода
+*/
+
+public class Solution {
+
+    public static int result;
+
+    public static void main(String[] args) {
+        String loop = "    for (double fahrenheit = -459.67; fahrenheit < 451; fahrenheit += 40) {\n";
+        System.out.println(loop);
+    }
+}
