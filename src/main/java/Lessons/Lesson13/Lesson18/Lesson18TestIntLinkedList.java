@@ -1,6 +1,4 @@
-package Lessons.Lesson18;
-
-import java.util.LinkedList;
+package Lessons.Lesson13.Lesson18;
 
 public class Lesson18TestIntLinkedList {
     public static void main(String[] args) {
