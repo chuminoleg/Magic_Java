@@ -1,4 +1,4 @@
-package Lessons.Lessons19_20_21marathon;
+package Lessons.Lesson19_20_21_22marathon;
 
 public class Lesson20 {
     private static final int CAT = 1;

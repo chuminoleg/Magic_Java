@@ -1,16 +1,14 @@
-package Lessons.Lessons19_20_21marathon.Materials;
+package Lessons.Lesson19_20_21_22marathon.Materials;
 
-public class Enums {
+public class EnumsII {
     // Enum - enumeration перечисляемые
     // как это делали до появления Enum
-    private static final int DOG = 0;
-    private static final int CAT = 1;
-    private static final int FROG = 3;
-    private static final int SHEEP = 4;
-    private static final int DUCK = 5;
+//    static Animal animal = Animal.CAT;
 
     public static void main(String[] args) {
-        int animal = DOG; // целочисленная переменная не предназначена для обозначения например животных
+        Animal animal = Animal.CAT;
+        System.out.println(animal);
+//        Animal animal2 = 100;
         switch (animal) {
             case DOG:
                 System.out.println("It's a DOG");
@@ -26,9 +24,6 @@ public class Enums {
                 break;
             case DUCK:
                 System.out.println("It's a DUCK");
-                break;
-            default:
-                System.out.println("It's not animal");
                 break;
         }
     }

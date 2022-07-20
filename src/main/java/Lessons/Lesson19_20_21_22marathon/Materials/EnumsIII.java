@@ -1,4 +1,4 @@
-package Lessons.Lessons19_20_21marathon.Materials;
+package Lessons.Lesson19_20_21_22marathon.Materials;
 
 public class EnumsIII {
     public static void main(String[] args) {
