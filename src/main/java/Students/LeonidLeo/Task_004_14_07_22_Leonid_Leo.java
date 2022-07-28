@@ -1,4 +1,4 @@
-package Classes;
+package Students.LeonidLeo;
 /**
  Назад в прошлое
  В классе Solution есть поле intArray, геттер и сеттер для него, и метод main с объявленными в нем переменными.
@@ -27,7 +27,7 @@ public class Task_004_14_07_22_Leonid_Leo {
     }
 
     public static void main(String[] args) {
-        Task_005_14_07_22_Leonid_Leo solution = new Task_005_14_07_22_Leonid_Leo();
+        Classes.Task_005_14_07_22_Leonid_Leo solution = new Classes.Task_005_14_07_22_Leonid_Leo();
         String string = new String("Hello");
         StringBuilder stringBuilder = new StringBuilder();
     }

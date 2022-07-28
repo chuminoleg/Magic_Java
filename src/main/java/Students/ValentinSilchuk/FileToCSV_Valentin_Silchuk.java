@@ -1,6 +1,8 @@
 package HomeTask;
 
 import java.io.*;
+import java.util.Arrays;
+
 /**
  * Есть исходный текстовый файл с данными,
  * необходимо считать данные и преобразовать к виду @.csv файл для дальнейшей обработки в Excel.
@@ -10,14 +12,17 @@ import java.io.*;
  */
 public class FileToCSV_Valentin_Silchuk {
     public static void main(String[] args) throws IOException {
-        String fileToReadPath = "C:\\Users\\Home PC\\IdeaProjects\\magic_java\\src\\main\\java\\HomeTask\\fileToProcess.txt";
+        String fileToReadPath = "C:\\Users\\Oleg_Chumin\\IdeaProjects\\Magic_Java\\src\\main\\java\\Lessons" +
+                "\\Tasks\\fileToProcess.txt";
         File file = new File(fileToReadPath);
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         String stringLine = bufferedReader.readLine();
         stringLine = stringLine.replace(',', ';');
         String[] separateLines = stringLine.split("\\\\n");
-        String outputFilePath = "C:\\Users\\Home PC\\IdeaProjects\\magic_java\\src\\main\\java\\HomeTask\\output.csv";
+//        System.out.println(Arrays.toString(separateLines));
+        String outputFilePath = "C:\\Users\\Oleg_Chumin\\IdeaProjects\\Magic_Java\\src\\main\\java\\Students" +
+                "\\ValentinSilchuk\\output.csv";
         File outputcsv = new File(outputFilePath);
         FileOutputStream fos = new FileOutputStream(outputcsv);
         PrintWriter printWriter = new PrintWriter(fos);
